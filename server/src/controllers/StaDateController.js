@@ -94,7 +94,6 @@ class StaDateController {
           }
         }
       });
-      console.log('res', prodByFab.length);
       nbFab3Mois = [nbFabJan.length, nbFabFeb.length, nbFabMars.length];
       const moyenne =
         Math.round((prodByFab.length / fabData.length) * 100) / 100;

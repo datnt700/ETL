@@ -18,9 +18,18 @@ const data = dataFile.index();
 //     console.log(err);
 //   });
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Cho phép tất cả các origin truy cập
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
+
 var corsOptions = {
   origin: 'http://localhost:3000',
-  optionsSuccessStatus: 200, // For legacy browser support
+  optionsSuccessStatus: 200,
 };
 const route = require('./src/routes');
 app.use(cors(corsOptions));

@@ -152,9 +152,9 @@ class StatistiquesController {
 
       clearArray(chartTopProd);
       addArray(chartTopProd, chartProd);
-      // console.log(filteredProductByFabTop, filteredProductByProdTop);
       moyenneProdTop1 = (filteredProductByFabTop.length / 10) * 100;
       moyenneProdTop2 = (filteredProductByProdTop.length / 10) * 100;
+      console.log(filteredProductByFabTop);
     }
 
     function clearArray(array) {
